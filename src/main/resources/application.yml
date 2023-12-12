@@ -1,0 +1,45 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: TREEFE-TEST
+  data:
+    mongodb:
+      #username: mongo
+      #password: 
+      host: localhost
+      port: 27017
+      database: MultiDBTestwithoutConfig
+      #authentication-database: admin
+  
+
+  datasource:  
+    url: jdbc:postgresql://localhost:5432/MultiDBTestwithoutConfig
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate: 
+      ddl-auto: update
+    properties: 
+      hibernate: 
+        format_sql: false
+        
+
+      
+      
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+    
+
+      
+        
+  
